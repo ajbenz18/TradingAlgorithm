@@ -4,8 +4,8 @@ import pandas as pd
 
 
 base_url_paper = "https://paper-api.alpaca.markets"
-api_key_id_paper ='PKL6C20IVZZ8QTU3FPJV'
-api_secret_paper ='OVUsMMixRuPeMDQI4unV02x6eFKrkCYRCXdPBsdA'
+api_key_id_paper ='your_api_paper_key'
+api_secret_paper ='your_secret_api_paper_key'
 api_paper=tradeapi.REST(api_key_id_paper, api_secret_paper, base_url_paper, 'v2')
 
 #this gets all the stocks in your first watchlist in alpaca
