@@ -27,24 +27,6 @@ class Stock():
         self.uptrending=self.isUptrending()
         self.price=api_paper.get_last_trade(self.ticker).price #gets approximate current price
 
-    def __repr__(self):
-        print("\n"+self.ticker)
-        print(self.data)
-        print("SMA9:", self.sma9)
-        print("old SMA9:", self.oldsma9)
-        print("uptrending: ", self.uptrending)
-        print("price:", self.price)
-        return "\n"
-
-    def __str__(self):
-        print("\n"+self.ticker)
-        print(self.data)
-        print("SMA9:", self.sma9)
-        print("old SMA9:", self.oldsma9)
-        print("uptrending: ", self.uptrending)
-        print("price:", self.price)
-        return "\n"
-
     def getsma180(self):
         """180 hour SMA line (which I wanted to use) is essentially the same as the the 26 day SMA. Data for 
         26 day SMA line is much easier to get, so I'm actually calculating the 26 day SMA line here instead"""
