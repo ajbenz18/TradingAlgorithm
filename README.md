@@ -16,7 +16,7 @@ If you intend to upload an Alpaca trading algorithm to AWS Lambda as I did, here
 * Download all the dependencies into a local directory with your python script using ```pip3 install -t . packageName```
 * (For MacOS and Windows users) The Alpaca python package uses pandas and numpy. After downloading this package locally, you need to open the folder and delete any folders pretaining to pandas and numpy. You will then need to replace them with the linux version, since AWS runs on Linux, and the windows/mac versions of numpy/pandas are not compatitable with it.
 They can be found here: https://pypi.org/project/numpy/#files and here https://pypi.org/project/pandas/#files
-I'm running Python 3.7, so I used numpy-1.19.0-cp37-cp37m-manylinux1_x86_64.whl and pandas-1.0.5-cp37-cp37m-manylinux1_x86_64.whl
+I'm running Python 3.7, so I used ```numpy-1.19.0-cp37-cp37m-manylinux1_x86_64.whl``` and ```pandas-1.0.5-cp37-cp37m-manylinux1_x86_64.whl```.
 Once you download these you will need to unzip them using ```$ unzip pandas-1.0.5-cp37-cp37m-manylinux1_x86_64.whl``` and ```$ unzip numpy-1.19.0-cp37-cp37m-manylinux1_x86_64.whl```
 If you don't do this, you will get some funky error messages about how certain C-extensions of numpy are missing
 * zip up all of these libraries and your python script and upload them to an Amazon S3 bucket (the .zip folder will likely be too large to upload to Lambda directly)
